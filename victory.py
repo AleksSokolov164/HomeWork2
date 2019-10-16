@@ -24,19 +24,20 @@ while answer=="да":
     born_year_Shostokovich = int(input('Введите год рождения Дмитрия Дмитриевича Шостоковича:'))# 1906 год рождения Дмитрия Дмитриевича Шостоковича
     born_year_Musorgskiy = int(input('Введите год рождения Модеста Петровича Мусоргского:'))# 1839 год рождения Модеста Петровича Мусоргского
     born_year_Rimskiy_Korsakov = int(input('Введите год рождения Николая Андреевича Римского-Корсакова:'))# 1844 год рождения Николая Андреевича Римского-Корсакова
-    n = 0
+    amount_answer_plus = 0
     if born_year_Glinka ==1804:
-        n=n+1
+        amount_answer_plus+=1
     if  born_year_Rohmaninov==1873:
-        n=n+1
+        amount_answer_plus += 1
     if  born_year_Chaykovskogo==1840:
-        n=n+1
+        amount_answer_plus+=1
     if born_year_Shostokovich == 1906:
-        n = n + 1
+        amount_answer_plus+=1
     if born_year_Musorgskiy == 1839:
-        n = n + 1
+        amount_answer_plus+=1
     if born_year_Rimskiy_Korsakov == 1844:
-        n = n + 1
-    print("Количество правильных ответов=", n,"Количество неправильных ответов =", amount_answer-n,\
-          "Процент правильных ответов=", str((n*100)/amount_answer)+"%","Процент неправильных ответов=", str(100-(n*100)/amount_answer)+"%")
+        amount_answer_plus+=1
+    print("Количество правильных ответов=", amount_answer_plus, "Количество неправильных ответов =", amount_answer-amount_answer_plus,\
+          "Процент правильных ответов=", str((amount_answer_plus*100)/amount_answer)+"%",\
+          "Процент неправильных ответов=", str(100-(amount_answer_plus*100)/amount_answer)+"%")
     answer = input("Желаете повторить ещё раз? (да\нет)")
